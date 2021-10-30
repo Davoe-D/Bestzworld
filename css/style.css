@@ -59,6 +59,12 @@ nav{
 .nav-links ul li :hover::after{
     width: 100%;
 }
+#mobile{
+    display: none;
+}
+.hamburger{
+    display: none;
+}
 
 .text-box {
     width: 90%;
@@ -113,31 +119,76 @@ nav .fa{
     .text-box p {
         font-size: 15px;
     }
-
-    .nav-links ul li {
-        display: block;
-    }
     .nav-links{
+        display: none;
+    }
+    #mobile{
+        display: none;
         position: absolute;
         background: blue;
         height: 100vh;
         width: 200px;
         top: 0;
-        right: -200px;
+        right: 0px;
         text-align: left;
         z-index: 2;
         transition: 1s;
     }
-    nav .fa{
+    #mobile ul li{
+        list-style: none;
+        display: inline-block;
+        padding:10px 12px;
+        position: relative;
+    }
+    #mobile ul li::after{
+        content: '';
+        width: 0%;
+        height: 1px;
+        background: rgb(247, 251, 255);
+        display: block; 
+        margin: auto;
+        transition: 0.7s;
+    }
+    #mobile ul li:hover::after{
+        width: 100%;
+    }
+    .mobile-active:hover{
+        border: 1px solid rgb(46, 32, 32);
+        background: black;
+        padding: 10px;
+        border-radius: 4px;
+        /* width: 100%; */
+        transition: .3s ease-in-out all;
+    }
+    #mobile li{
+        padding-top: 0px;
+        margin-left: 40px;
+        text-align: center;
+    }
+    #mobile li a{
+        font-size: 13px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    #times{
         display: block;
+        padding: 5px;
         color: #fff;
-        margin-bottom: 10px;
+        top: 0;
         font-size: 20px;
         cursor: pointer;
-        padding: 2;
+        position: absolute;
+        transition: 1s ease-in-out;
     }
-    .nav-links ul{
+    .hamburger{
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        position: fixed;
         padding: 30px;
+        color: black;
+        font-size: 20px;
+        display: block;
     }
     .row {
         flex-direction: column;
