@@ -356,9 +356,10 @@ h3{
 .footer {
     width: 100%;
     text-align: center;
-    padding: 30px 0;
+    padding: 2px 0;
     border-radius: 10px;
     padding-top: 40px
+    
 }
 .icons .fab{
     margin: 0 13px;
@@ -366,7 +367,7 @@ h3{
     padding: 18px 0;
 }
 
-/*------------ ANIMAATIONS---------- */
+/*------------ ANIMATIONS---------- */
 
 .effect-wrap .effect{
     position: absolute;
