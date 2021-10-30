@@ -22,7 +22,6 @@
         <nav>
             <a href="index.html"><img src="images/logo.png" alt=""></a>
             <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li class="active"><a href="#">HOME</a></li>
                     <li class="active"><a href="#">ABOUT</a></li>
@@ -31,7 +30,6 @@
                     <li class="active"><a href="#">CONTACT</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
 <div class="text-box">
@@ -184,18 +182,35 @@
     </div>
     <p>© COPYRIGHT >> BESTZ</p>
 </section>
-
+<div id="mobile">
+    <i id="times" class="fa fa-times" onclick="hideMenu()"></i>
+    <nav>
+        <ul>
+            <li ><a class="mobile-active" href="#">HOME</a></li>
+            <li ><a class="mobile-active" href="#">ABOUT</a></li>
+            <li><a class="mobile-active" href="#">PRODUCT</a></li>
+            <li ><a class="mobile-active" href="#">SERVICE</a></li>
+            <li ><a class="mobile-active" href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="hamburger">
+    <i id="bars" class="fa fa-bars" onclick="showMenu()"></i>
+</div>
 
 
 <!-- JAVA SCRIPT FOR TOGGLE MENU -->
 
 <script>
-    var navLinks = document.getElementById("navLinks");
+    var navLinks = document.getElementById("mobile");
+    var fa_bars = document.getElementById("bars")
     function showMenu() {
-        navLinks.style.right= "0"
+        navLinks.style.display= "block"
+        fa_bars.style.display = "none"
     }
     function hideMenu() {
-        navLinks.style.right= "-200px"
+        navLinks.style.display = "none"
+        fa_bars.style.display = "block"
     }
 
 </script>
