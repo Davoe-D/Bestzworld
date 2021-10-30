@@ -186,7 +186,7 @@ nav .fa{
         cursor: pointer;
         position: absolute;
         padding: 30px;
-        color: black;
+        color: rgb(255, 255, 255);
         font-size: 20px;
         display: block;
     }
