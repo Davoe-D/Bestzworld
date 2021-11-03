@@ -40,15 +40,6 @@ nav{
     font-size: 13px;
 }
 
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: rgb(36, 118, 194);
-    display: block;
-    margin: auto;
-    transition: 0.7s;
-}
 
 .active:hover{
     border: 1px solid white;
@@ -205,6 +196,9 @@ nav .fa{
         font-size: 24px;
     }
     .effect-1{
+        display: none;
+    }
+    .effect-3 {
         display: none;
     }
 }
@@ -398,10 +392,6 @@ h3{
     padding: 0;
 }
 
-.horizontal{
-    align-items: center;
-    border: .1px solid black;
-}
 /*----------- FOOTER ---------- */
 
 .footer {
@@ -409,8 +399,7 @@ h3{
     text-align: center;
     padding: 2px 0;
     border-radius: 10px;
-    padding-top: 40px
-    
+    padding-top: 40px;    
 }
 .icons .fab{
     margin: 0 13px;
@@ -425,12 +414,21 @@ h3{
     z-index: -1;
 }
 
-.effect-1{
+/* .effect-1{
     width: 30px;
     height: 30px;
     border: 4px solid #f21a1a;
     right: 10%;
     animation: roll 10s linear infinite;
+} */
+.effect-3 {
+    width: 150px;
+    height: 150px;
+    border: 25px solid rgb(165, 120, 120);
+    border-radius: 50%;
+    left: 41.5%;
+    top: 75%;
+    animation: leftBounce 3s ease-in-out infinite;
 }
 
 @keyframes roll {
@@ -439,5 +437,14 @@ h3{
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes leftBounce{
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(25px);
     }
 }
